@@ -26,6 +26,7 @@
 
 @media (min-width: 768px) {
   .toolbar {
+    position: absolute;
     background: transparent;
   }
 }
@@ -77,7 +78,7 @@ footer {
 @media (min-width: 768px) {
   .grid__container {
     height: 100%;
-    grid-template-columns: 60px auto 60px;
+    grid-template-columns: 78px auto 60px;
   }
 }
 
@@ -112,19 +113,19 @@ footer {
 }
 
 .photo__135-image {
-  background: url("/images/photos/main/Set_2/135.jpg");
+  background: url("/images/photos/main/set_2/135.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .photo__120A-image {
-  background: url("/images/photos/main/Set_2/120A.jpg");
+  background: url("/images/photos/main/set_2/120A.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .photo__120B-image {
-  background: url("/images/photos/main/Set_2/120B.jpg");
+  background: url("/images/photos/main/set_2/120B.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -153,7 +154,6 @@ footer {
 
   .photo__label {
     display: inline;
-    font-family: Lora, serif;
     font-weight: 400;
     font-size: 13.5px;
     text-align: right;

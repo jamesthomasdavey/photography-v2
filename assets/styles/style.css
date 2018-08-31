@@ -116,18 +116,6 @@ body {
   list-style-type: none;
 }
 
-.nav__menu > a {
-  text-decoration: none;
-}
-
-.nav__menu > a > li {
-  padding: 1rem;
-  text-align: center;
-  color: var(--black);
-  font-family: var(--main-font-stack);
-  transition: all 0.3s ease;
-}
-
 @media (min-width: 460px) {
   .nav {
     grid-template-rows: auto auto auto;
@@ -273,16 +261,42 @@ body {
 *********** HOVER TRANSITIONS
 *****************************/
 
-.nav__menu > a > li > span {
+.nav__menu a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.menu__item {
+  text-align: center;
+  color: var(--black);
+  font-family: var(--main-font-stack);
+  padding: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.sub {
+  padding: .5rem;
+  font-size: .9rem;
+}
+
+.nav__menu-divider {
+  width: 25%;
+  height: 3px;
+  margin: 2rem auto;
+  background: #D5D5D5;
+}
+
+.menu__item > span {
   position: relative;
   background: transparent;
   color: #333;
   z-index: 0;
-  padding: 5px 12px;
+  padding: 5px 18px;
   transition: all 0.3s ease-out;
 }
 
-.nav__menu > a > li > span:before {
+.menu__item > span:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -296,14 +310,6 @@ body {
   transition: transform 0.3s ease-out;
 }
 
-.nav__menu > a > li:hover {
-  cursor: pointer;
-}
-
-.nav__menu > a > li:hover > span {
-  /* color: white; */
-}
-
-.nav__menu > a > li:hover > span:before {
+.menu__item:hover > span:before {
   transform: scaleX(1);
 }
