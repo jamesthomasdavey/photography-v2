@@ -1,0 +1,207 @@
+/*****************************
+********************* TOOLBAR
+*****************************/
+
+.toolbar {
+  height: 54px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  background: #f0f0f0;
+  z-index: 40;
+  transition: all 0.3s ease;
+}
+
+.toolbar > a {
+  display: block;
+  margin: auto 0 auto auto;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: #333;
+  letter-spacing: 4px;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .toolbar {
+    background: transparent;
+  }
+}
+
+/*****************************
+********************** FOOTER
+*****************************/
+
+footer {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  footer {
+    display: block;
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+  }
+  .email-icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("../../images/icons/contact.svg");
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+/*****************************
+****************** PHOTO GRID
+*****************************/
+
+.grid__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40px auto 40px;
+  grid-template-rows: 74px auto 20px;
+  grid-template-areas:
+    ". . ."
+    ". g ."
+    ". . .";
+}
+
+@media (min-width: 768px) {
+  .grid__container {
+    height: 100%;
+    grid-template-columns: 60px auto 60px;
+  }
+}
+
+.photo__grid {
+  grid-area: g;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto;
+}
+
+.image__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.photo__135 {
+  padding-top: 66.7%;
+}
+
+.photo__120A,
+.photo__120B {
+  padding-top: 125%;
+}
+
+.image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.photo__135-image {
+  background: url("/images/photos/main/Set_2/135.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.photo__120A-image {
+  background: url("/images/photos/main/Set_2/120A.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.photo__120B-image {
+  background: url("/images/photos/main/Set_2/120B.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.photo__label {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .photo__grid {
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 60px;
+    grid-template-columns: 5fr 7.5fr;
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    height: 100%;
+    max-height: 768px;
+    grid-template-areas:
+      "s ma"
+      "mb ma"
+      ". .";
+  }
+
+  .photo__label {
+    display: inline;
+    font-family: Lora, serif;
+    font-weight: 400;
+    font-size: 13.5px;
+    text-align: right;
+    position: absolute;
+    right: 4px;
+    bottom: -44px;
+  }
+
+  .photo__135 {
+    grid-area: s;
+    width: auto;
+    padding-top: 0;
+  }
+
+  .photo__135-image {
+    position: relative;
+    width: 80%;
+    padding-top: 53.33333333%;
+    height: auto;
+  }
+
+  .photo__120A {
+    grid-area: ma;
+    width: auto;
+    padding-top: 0;
+    display: flex;
+  }
+
+  .photo__120A-image {
+    position: relative;
+    margin: auto 0 auto auto;
+    width: 75%;
+    height: auto;
+    padding-top: 93.75%;
+  }
+
+  .photo__120B {
+    grid-area: mb;
+    display: flex;
+    padding-top: 0;
+    width: auto;
+  }
+
+  .photo__120B-image {
+    position: relative;
+    margin: auto 0 0 auto;
+    width: 70%;
+    padding-top: 87.5%;
+    height: auto;
+  }
+}
