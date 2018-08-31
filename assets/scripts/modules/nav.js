@@ -3,6 +3,10 @@ const nav = (() => {
   const burger = document.querySelector(".burger");
   const backdrop = document.querySelector(".nav__backdrop");
 
+  const state = {
+    open: false
+  };
+
   const open = () => {
     nav.classList.add("open");
     burger.classList.add("change");
@@ -10,6 +14,7 @@ const nav = (() => {
       burger.children[i].classList.add("change");
     }
     backdrop.classList.add("display");
+    state.open = true;
   };
 
   const close = () => {
@@ -19,11 +24,13 @@ const nav = (() => {
       burger.children[i].classList.remove("change");
     }
     backdrop.classList.remove("display");
+    state.open = false;
   };
 
   return {
     open,
-    close
+    close,
+    state
   };
 })();
 
