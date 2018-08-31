@@ -96,7 +96,7 @@ footer {
 }
 
 .photo__135 {
-  padding-top: 66.7%;
+  padding-top: 80%;
 }
 
 .photo__120A,
@@ -113,19 +113,19 @@ footer {
 }
 
 .photo__135-image {
-  background: url("/images/photos/main/set_2/135.jpg");
+  background: url("/images/photos/120_s1/120_s1_22_p1.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .photo__120A-image {
-  background: url("/images/photos/main/set_2/120A.jpg");
+  background: url("/images/photos/120_s1/120_s1_05_p2.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .photo__120B-image {
-  background: url("/images/photos/main/set_2/120B.jpg");
+  background: url("/images/photos/120_s1/120_s1_18_p3.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -171,7 +171,7 @@ footer {
   .photo__135-image {
     position: relative;
     width: 80%;
-    padding-top: 53.33333333%;
+    padding-top: 64%;
     height: auto;
   }
 
