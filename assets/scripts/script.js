@@ -1,21 +1,21 @@
 import nav from "./modules/nav.js";
 
-const openCloseNav = (() => {
-  const navEl = document.querySelector("nav");
-  const burgerEl = document.querySelector(".burger");
-  const navBackdropEl = document.querySelector(".nav__backdrop");
+const gallerySelectorFormEl = document.querySelector(".gallery__selector-form");
+const photogridEls = document.querySelectorAll(".photogrid__grid");
 
-  burgerEl.addEventListener("click", () => {
-    if (burgerEl.classList.contains("change")) {
-      nav.close();
+gallerySelectorFormEl.addEventListener("change", () => {
+  const selectedGalleryID = document
+    .querySelector(".gallery__radio-button:checked")
+    .getAttribute("id");
+  photogridEls.forEach(photogridEl => {
+    if (
+      photogridEl.classList.contains(`photogrid__grid-${selectedGalleryID}`)
+    ) {
+      photogridEl.style.display = "grid";
     } else {
-      nav.open();
+      photogridEl.style.display = "none";
     }
   });
-  navBackdropEl.addEventListener("click", nav.close);
-  navEl.addEventListener("click", e => {
-    if (e.target.classList.contains("nav")) {
-      nav.close();
-    }
-  });
-})();
+});
+
+nav.init();

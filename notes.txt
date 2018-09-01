@@ -1,0 +1,9 @@
+z-indexes:
+
+30    .photogrid__image-cover
+40    .toolbar
+41    .sidebar
+49    .nav__backdrop
+50    .nav
+51    .burger
+100   footer

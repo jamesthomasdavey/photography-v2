@@ -276,15 +276,15 @@ body {
 }
 
 .sub {
-  padding: .5rem;
-  font-size: .9rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .nav__menu-divider {
   width: 25%;
   height: 3px;
   margin: 2rem auto;
-  background: #D5D5D5;
+  background: #d5d5d5;
 }
 
 .menu__item > span {

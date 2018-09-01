@@ -1,36 +1,49 @@
 const nav = (() => {
-  const nav = document.querySelector(".nav");
-  const burger = document.querySelector(".burger");
-  const backdrop = document.querySelector(".nav__backdrop");
-
-  const state = {
-    open: false
-  };
+  const navEl = document.querySelector(".nav");
+  const burgerEl = document.querySelector(".burger");
+  const backdropEl = document.querySelector(".nav__backdrop");
 
   const open = () => {
-    nav.classList.add("open");
-    burger.classList.add("change");
-    for (let i = 0; i < burger.children.length; i++) {
-      burger.children[i].classList.add("change");
+    navEl.classList.add("open");
+    burgerEl.classList.add("change");
+    for (let i = 0; i < burgerEl.children.length; i++) {
+      burgerEl.children[i].classList.add("change");
     }
-    backdrop.classList.add("display");
-    state.open = true;
+    backdropEl.classList.add("display");
   };
 
   const close = () => {
-    nav.classList.remove("open");
-    burger.classList.remove("change");
-    for (let i = 0; i < burger.children.length; i++) {
-      burger.children[i].classList.remove("change");
+    navEl.classList.remove("open");
+    burgerEl.classList.remove("change");
+    for (let i = 0; i < burgerEl.children.length; i++) {
+      burgerEl.children[i].classList.remove("change");
     }
-    backdrop.classList.remove("display");
-    state.open = false;
+    backdropEl.classList.remove("display");
+  };
+
+  const listeners = () => {
+    burgerEl.addEventListener("click", () => {
+      if (burgerEl.classList.contains("change")) {
+        close();
+      } else {
+        open();
+      }
+    });
+
+    backdropEl.addEventListener("click", close);
+    navEl.addEventListener("click", e => {
+      if (e.target.classList.contains("nav")) {
+        close();
+      }
+    });
+  };
+
+  const init = () => {
+    listeners();
   };
 
   return {
-    open,
-    close,
-    state
+    init
   };
 })();
 
