@@ -172,12 +172,16 @@
 
   .about__photo-wrapper {
     grid-area: p;
-    width: 90%;
-    min-width: 280px;
+    width: 88%;
+    min-width: 260px;
     justify-self: end;
     align-self: center;
-    padding: 2.2rem;
-    background: #f0f0f0;
+    overflow: hidden;
+  }
+
+  .about__photo {
+    width: 150%;
+    transform: translateX(-15.7%);
   }
 
   .about__divider {
@@ -204,7 +208,7 @@
   background: transparent;
   color: #333;
   z-index: 0;
-  padding: 2px 8px;
+  padding: 2px 12px;
   transition: all 0.3s ease-out;
 }
 
@@ -216,15 +220,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #6d7993;
+  background: #d7e5ee;
   transform: scaleX(0);
   transform-origin: 0 50%;
   transition: transform 0.3s ease-out;
-}
-
-.about__other-list-item:hover > span {
-  color: white;
-  cursor: pointer;
 }
 
 .about__other-list-item:hover > span:before {
