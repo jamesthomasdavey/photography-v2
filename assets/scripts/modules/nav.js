@@ -3,6 +3,10 @@ const nav = (() => {
   const burgerEl = document.querySelector(".burger");
   const backdropEl = document.querySelector(".nav__backdrop");
 
+  const state = {
+    open: true
+  };
+
   const open = () => {
     navEl.classList.add("open");
     burgerEl.classList.add("change");
@@ -19,6 +23,13 @@ const nav = (() => {
       burgerEl.children[i].classList.remove("change");
     }
     backdropEl.classList.remove("display");
+  };
+
+  const closeDelay = url => {
+    close();
+    setTimeout(() => {
+      window.location = url;
+    }, 300);
   };
 
   const listeners = () => {
@@ -43,7 +54,9 @@ const nav = (() => {
   };
 
   return {
-    init
+    init,
+    close,
+    closeDelay
   };
 })();
 
