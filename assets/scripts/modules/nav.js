@@ -32,6 +32,8 @@ const nav = (() => {
     }, 300);
   };
 
+  document.querySelector("#current__page").addEventListener("click", close);
+
   const listeners = () => {
     burgerEl.addEventListener("click", () => {
       if (burgerEl.classList.contains("change")) {

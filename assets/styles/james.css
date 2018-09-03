@@ -105,8 +105,20 @@
   height: 3px;
   justify-self: center;
   align-self: center;
-  background: #d5d5d5;
+  background: #e5e5e5;
   margin: 1.8rem 0;
+  animation: loadDivider 0.8s ease-out;
+}
+
+@keyframes loadDivider {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 25%;
+  }
 }
 
 .about__other-title {

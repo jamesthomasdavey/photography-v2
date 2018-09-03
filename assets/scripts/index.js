@@ -70,10 +70,4 @@ gallerySelectorFormEl.addEventListener("change", () => {
   autoAdvancePhotoGrid.reset();
 });
 
-document.querySelector("#current__page").addEventListener("click", nav.close);
-
-const closeDelay = () => {
-  nav.closeDelay();
-};
-
 nav.init();

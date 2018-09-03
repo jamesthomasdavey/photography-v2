@@ -7,6 +7,4 @@ setTimeout(() => {
   aboutBodyEl.classList.add("display");
 }, 50);
 
-document.querySelector("#current__page").addEventListener("click", nav.close);
-
 nav.init();
