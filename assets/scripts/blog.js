@@ -39,8 +39,9 @@ const renderPosts = () => {
   blogContainerEl.classList.remove("display");
   setTimeout(() => {
     let markup = ``;
-    myBlog.pages[myBlog.currentPageIndex].posts.forEach((post, index, array) => {
-      markup += `
+    myBlog.pages[myBlog.currentPageIndex].posts.forEach(
+      (post, index, array) => {
+        markup += `
         <div class="blog__post">
           <div class="blog__post-heading">
             <h2 class="blog__post-title">${post.title}</h2>
@@ -51,13 +52,14 @@ const renderPosts = () => {
           </div>
         </div>
       `;
-      markup +=
-        index + 1 === array.length
-          ? ``
-          : `
+        markup +=
+          index + 1 === array.length
+            ? ``
+            : `
         <div class="blog__post-divider"></div>
       `;
-    });
+      }
+    );
 
     let footerMarkup = `
       <div class="blog__page-footer">

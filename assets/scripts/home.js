@@ -25,6 +25,15 @@ const displayPhotoGrid = () => {
       }, 50);
     }
   });
+  scrollToTop();
+};
+
+const scrollToTop = () => {
+  let timeOut;
+  if (document.body.scrollTop != 0 || document.documentElement.scrollTop != 0) {
+    window.scrollBy(0, -50);
+    timeOut = setTimeout(scrollToTop, 10);
+  } else clearTimeout(timeOut);
 };
 
 const advancePhotoGrid = () => {
@@ -46,7 +55,7 @@ const advancePhotoGrid = () => {
 
 const autoAdvancePhotoGrid = (() => {
   let elapsed = 0;
-  const waitTime = 7;
+  const waitTime = 9;
   setInterval(() => {
     elapsed++;
     if (elapsed >= waitTime) {
