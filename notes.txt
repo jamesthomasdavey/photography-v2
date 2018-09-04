@@ -7,3 +7,7 @@ z-indexes:
 50    .nav
 51    .burger
 100   footer
+150   .lightbox__wrapper
+151   .lightbox__backdrop
+152   .lightbox__photo
+155   .lightbox__button

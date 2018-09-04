@@ -1,4 +1,5 @@
 import nav from "./modules/nav.js";
+import lightbox from "./modules/lightbox.js";
 
 const photoGalleryWrapperEl = document.querySelector(".photo__gallery-wrapper");
 
@@ -7,3 +8,4 @@ setTimeout(() => {
 }, 50);
 
 nav.init();
+lightbox.init();
