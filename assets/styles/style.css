@@ -92,6 +92,13 @@ button {
   font-size: 18px;
 }
 
+@media (max-width: 374px) {
+  .toolbar > a {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+}
+
 @media (min-width: 768px) {
   .toolbar {
     position: absolute;

@@ -5,10 +5,11 @@ export default class BlogPost {
     this.body = body;
   }
   getFormattedDate() {
-    let newDate = new Date(this.date);
+    let newDate = this.date.split(" ")[0];
+    newDate = new Date(newDate);
     let formattedDate = "";
     formattedDate +=
-      (newDate.getUTCMonth() + 1).toString().length === 2
+      (newDate.getMonth() + 1).toString().length === 2
         ? `${newDate.getMonth() + 1}.`
         : `0${newDate.getMonth() + 1}.`;
     formattedDate +=

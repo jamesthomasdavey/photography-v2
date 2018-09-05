@@ -34,7 +34,7 @@ body {
   max-width: 1180px;
   justify-self: center;
   font-size: 0;
-  gap: 20px;
+  grid-gap: 20px;
   display: grid;
   grid-area: g;
   grid-template-columns: auto;

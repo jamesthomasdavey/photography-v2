@@ -12,10 +12,7 @@ const lightbox = (() => {
 
   let currentPhotoSrc = "";
 
-  const photoSrcs = [];
-  photoEls.forEach(photoEl => {
-    photoSrcs.push(photoEl.src);
-  });
+  const photoSrcs = [...photoEls].map(photoEl => photoEl.src);
 
   setTimeout(() => {
     photoGalleryWrapperEl.classList.add("display");
