@@ -6,8 +6,9 @@ import Blog from "./modules/Blog.js";
 
 const blogContainerEl = document.querySelector(".blog__container");
 
-let url =
-  "https://api.tumblr.com/v2/blog/jamesthomasdavey.tumblr.com/posts/text?api_key=GPFs9wx2Y6jaEyhsxfrhXqcbYlmGefKkngraQ7jOUH5xFmXZy1&notes_info=true";
+const API_KEY = "GPFs9wx2Y6jaEyhsxfrhXqcbYlmGefKkngraQ7jOUH5xFmXZy1";
+const URL_ENDPOINT = "https://api.tumblr.com";
+let url = `${URL_ENDPOINT}/v2/blog/jamesthomasdavey.tumblr.com/posts/text?api_key=${API_KEY}`;
 let blogPosts;
 let blogPages = [];
 let myBlog;
