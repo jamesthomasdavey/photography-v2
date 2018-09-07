@@ -111,7 +111,8 @@ footer {
   grid-area: g;
   width: 100%;
   display: grid;
-  gap: 20px;
+  grid-gap: 20px;
+  font-size: 0;
   grid-template-columns: auto;
   transition: opacity 0.2s ease;
   pointer-events: none;
