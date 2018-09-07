@@ -7,6 +7,7 @@ const lightbox = (() => {
   const lightboxWrapperEl = document.querySelector(".lightbox__wrapper");
   const lightboxBackdropEl = document.querySelector(".lightbox__backdrop");
   const lightboxPhotoEl = document.querySelector(".lightbox__photo");
+  const lightboxPhotoCoverEl = document.querySelector(".lightbox__photo-cover");
   const previousButtonEl = document.querySelector(".lightbox__arrow-previous");
   const nextButtonEl = document.querySelector(".lightbox__arrow-next");
 
@@ -97,6 +98,8 @@ const lightbox = (() => {
         nextPhoto();
       }
     });
+
+    lightboxPhotoCoverEl.addEventListener("click", nextPhoto);
   };
 
   const init = () => {

@@ -193,6 +193,10 @@ body {
   height: 100%;
 }
 
+.lightbox__photo-cover:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .lightbox__wrapper {
     grid-template-rows: 72px auto 72px;
