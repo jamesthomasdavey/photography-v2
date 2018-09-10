@@ -1,4 +1,5 @@
 body {
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -40,6 +41,7 @@ body {
   grid-template-columns: auto;
   pointer-events: none;
   opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
 
@@ -66,6 +68,7 @@ body {
   width: 100%;
   opacity: 0.4;
   background: transparent;
+  -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
 
@@ -117,6 +120,7 @@ body {
   display: none;
   pointer-events: none;
   opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
 
@@ -140,6 +144,7 @@ body {
 .lightbox__photo-wrapper {
   position: relative;
   grid-area: i;
+  -ms-flex-item-align: center;
   align-self: center;
   justify-self: center;
   z-index: 152;
@@ -150,6 +155,7 @@ body {
 .lightbox__photo {
   width: 100%;
   opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
 
@@ -195,7 +201,9 @@ body {
   border: none;
   width: 70px;
   height: 70px;
+  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+  -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
   z-index: 155;
 }
@@ -203,12 +211,14 @@ body {
 .lightbox__arrow-previous {
   grid-area: p;
   justify-self: center;
+  -ms-flex-item-align: center;
   align-self: center;
 }
 
 .lightbox__arrow-next {
   grid-area: n;
   justify-self: center;
+  -ms-flex-item-align: center;
   align-self: center;
 }
 
@@ -218,6 +228,7 @@ body {
   background: #bbbbbb;
   height: 3px;
   width: 32px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -241,29 +252,34 @@ body {
 .lightbox__arrow-previous-bar-1 {
   right: 50%;
   top: 21px;
+  -webkit-transform: rotate(-56deg);
   transform: rotate(-56deg);
 }
 
 .lightbox__arrow-previous-bar-2 {
   right: 50%;
   top: 46px;
+  -webkit-transform: rotate(56deg);
   transform: rotate(56deg);
 }
 
 .lightbox__arrow-next-bar-1 {
   left: 50%;
   top: 21px;
+  -webkit-transform: rotate(56deg);
   transform: rotate(56deg);
 }
 
 .lightbox__arrow-next-bar-2 {
   left: 50%;
   top: 46px;
+  -webkit-transform: rotate(-56deg);
   transform: rotate(-56deg);
 }
 
 @media (min-width: 768px) {
   .lightbox__arrow {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 }

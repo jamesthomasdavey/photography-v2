@@ -9,13 +9,20 @@
   right: 0;
   height: 100%;
   width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .gallery__selector {
   position: relative;
   margin: auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
 }
@@ -25,6 +32,8 @@
 }
 
 .gallery__radio-button-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 30px;
   width: 100%;
@@ -37,6 +46,7 @@
   height: 10px;
   margin: auto auto;
   border-radius: 50%;
+  -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
 .gallery__radio-button-label:hover {
@@ -112,8 +122,8 @@ footer {
   width: 100%;
   display: grid;
   grid-gap: 20px;
-  font-size: 0;
   grid-template-columns: auto;
+  -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
   pointer-events: none;
   opacity: 0;
@@ -152,6 +162,7 @@ footer {
 @media (min-width: 768px) {
   .photogrid__grid {
     justify-self: center;
+    -ms-flex-item-align: center;
     align-self: center;
     position: relative;
     width: 100%;
@@ -181,6 +192,7 @@ footer {
 
   .photogrid__image-1 {
     width: 80%;
+    -ms-flex-item-align: start;
     align-self: start;
     justify-self: start;
   }
@@ -191,6 +203,7 @@ footer {
 
   .photogrid__image-2 {
     width: 80%;
+    -ms-flex-item-align: center;
     align-self: center;
     justify-self: end;
   }
@@ -201,6 +214,7 @@ footer {
 
   .photogrid__image-3 {
     width: 70%;
+    -ms-flex-item-align: end;
     align-self: end;
     justify-self: end;
   }
@@ -221,6 +235,7 @@ footer {
 
   .photogrid__image-4 {
     width: 80%;
+    -ms-flex-item-align: center;
     align-self: center;
     justify-self: start;
   }
@@ -231,6 +246,7 @@ footer {
 
   .photogrid__image-5 {
     width: 85%;
+    -ms-flex-item-align: start;
     align-self: start;
     justify-self: end;
   }
@@ -241,6 +257,7 @@ footer {
 
   .photogrid__image-6 {
     width: 100%;
+    -ms-flex-item-align: end;
     align-self: end;
     justify-self: start;
   }
@@ -261,6 +278,7 @@ footer {
 
   .photogrid__image-7 {
     width: 85%;
+    -ms-flex-item-align: start;
     align-self: start;
     justify-self: start;
   }
@@ -271,6 +289,7 @@ footer {
 
   .photogrid__image-8 {
     width: 80%;
+    -ms-flex-item-align: center;
     align-self: center;
     justify-self: end;
   }
@@ -281,6 +300,7 @@ footer {
 
   .photogrid__image-9 {
     width: 100%;
+    -ms-flex-item-align: end;
     align-self: end;
     justify-self: end;
   }
@@ -300,6 +320,7 @@ footer {
 
   .photogrid__image-10 {
     width: 85%;
+    -ms-flex-item-align: center;
     align-self: center;
     justify-self: start;
   }
@@ -310,6 +331,7 @@ footer {
 
   .photogrid__image-11 {
     width: 85%;
+    -ms-flex-item-align: start;
     align-self: start;
     justify-self: end;
   }
@@ -320,6 +342,7 @@ footer {
 
   .photogrid__image-12 {
     width: 85%;
+    -ms-flex-item-align: end;
     align-self: end;
     justify-self: start;
   }

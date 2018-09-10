@@ -26,6 +26,7 @@
   width: 100%;
   max-width: 768px;
   opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
   display: block;
 }
@@ -48,7 +49,11 @@
 
 @media (min-width: 768px) {
   .blog__post-heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
@@ -59,6 +64,7 @@
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 5px;
+  -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 8px;
 }
@@ -71,10 +77,14 @@
 
 .blog__post-date {
   display: block;
+  -ms-flex-item-align: center;
   align-self: center;
 }
 
 .blog__post-content {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
   user-select: text;
   font-family: Lora, serif;
   line-height: 1.6rem;
@@ -101,7 +111,19 @@
   height: 3px;
   background: #e5e5e5;
   margin: 0 auto;
+  -webkit-animation: loadDivider 0.8s ease-out;
   animation: loadDivider 0.8s ease-out;
+}
+
+@-webkit-keyframes loadDivider {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 25%;
+  }
 }
 
 @keyframes loadDivider {
@@ -116,7 +138,10 @@
 }
 
 .blog__page-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
@@ -135,6 +160,7 @@
   background: #bbbbbb;
   height: 3px;
   width: 32px;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -161,23 +187,27 @@
 .blog__arrow-future-bar-1 {
   right: 50%;
   top: 21px;
+  -webkit-transform: rotate(-56deg);
   transform: rotate(-56deg);
 }
 
 .blog__arrow-future-bar-2 {
   right: 50%;
   top: 46px;
+  -webkit-transform: rotate(56deg);
   transform: rotate(56deg);
 }
 
 .blog__arrow-past-bar-1 {
   left: 50%;
   top: 21px;
+  -webkit-transform: rotate(56deg);
   transform: rotate(56deg);
 }
 
 .blog__arrow-past-bar-2 {
   left: 50%;
   top: 46px;
+  -webkit-transform: rotate(-56deg);
   transform: rotate(-56deg);
 }
