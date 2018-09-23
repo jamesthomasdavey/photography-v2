@@ -154,13 +154,6 @@ body {
 
 .lightbox__photo {
   width: 100%;
-  opacity: 0;
-  -webkit-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
-}
-
-.lightbox__photo.display {
-  opacity: 1;
 }
 
 .lightbox__photo-cover {

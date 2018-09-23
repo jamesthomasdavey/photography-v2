@@ -169,6 +169,7 @@ button {
 
 .nav__menu {
   grid-area: m;
+  position: relative;
   -ms-flex-item-align: center;
   align-self: center;
   width: 100%;
@@ -202,10 +203,14 @@ button {
   }
 
   .nav__spacer-1 {
+    grid-column: none;
+    grid-row: none;
     display: none;
   }
 
   .nav__spacer-2 {
+    grid-column: none;
+    grid-row: none;
     display: none;
   }
 
@@ -213,6 +218,7 @@ button {
     -webkit-transform: translateX(0);
     transform: translateX(0);
     background: transparent;
+    /* width: 260px; */
   }
   .nav__menu {
     min-width: 260px;
@@ -291,6 +297,9 @@ button {
 @media (min-width: 768px) {
   .burger {
     position: relative;
+    top: 0;
+    left: 0;
+    /* top: 50%; */
     -ms-flex-item-align: center;
     align-self: center;
     -webkit-transform: translateX(0);
@@ -299,16 +308,15 @@ button {
     transition: none;
   }
 
+  .burger.change {
+    height: 70px;
+  }
+
   .burger__bar {
     position: absolute;
     height: 3px;
     left: 18px;
     background-color: #333333;
-  }
-
-  .burger.change {
-    /* align-self: stretch; */
-    height: 70px;
   }
 
   .bar1.change {

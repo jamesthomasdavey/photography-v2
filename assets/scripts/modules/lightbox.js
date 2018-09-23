@@ -28,6 +28,7 @@ const lightbox = (() => {
   };
 
   const renderLightbox = () => {
+    // RENDER PREVIOUS/NEXT BUTTONS
     lightboxPhotoEl.src = currentPhotoSrc;
     if (photoSrcs.indexOf(currentPhotoSrc) <= 0) {
       previousButtonEl.setAttribute("disabled", "true");
@@ -40,6 +41,7 @@ const lightbox = (() => {
       nextButtonEl.removeAttribute("disabled", "true");
     }
 
+    // CHECKS IF PHOTO IS VERTICAL OR NOT, AND APPLIES VERTICAL STYLING
     if (
       photoEls[photoSrcs.indexOf(currentPhotoSrc)].classList.contains("photo-b")
     ) {
@@ -49,8 +51,6 @@ const lightbox = (() => {
       lightboxPhotoEl.classList.remove("vert");
       lightboxPhotoEl.parentNode.classList.remove("vert");
     }
-
-    lightboxPhotoEl.classList.add("display");
   };
 
   const closeLightbox = () => {
@@ -62,9 +62,8 @@ const lightbox = (() => {
 
   const previousPhoto = () => {
     if (currentPhotoSrc && photoSrcs.indexOf(currentPhotoSrc) !== 0) {
-      lightboxPhotoEl.classList.remove("display");
       currentPhotoSrc = photoSrcs[photoSrcs.indexOf(currentPhotoSrc) - 1];
-      setTimeout(renderLightbox, 200);
+      renderLightbox();
     }
   };
 
@@ -73,9 +72,8 @@ const lightbox = (() => {
       currentPhotoSrc &&
       photoSrcs.indexOf(currentPhotoSrc) + 1 !== photoSrcs.length
     ) {
-      lightboxPhotoEl.classList.remove("display");
       currentPhotoSrc = photoSrcs[photoSrcs.indexOf(currentPhotoSrc) + 1];
-      setTimeout(renderLightbox, 200);
+      renderLightbox();
     }
   };
 
@@ -96,6 +94,8 @@ const lightbox = (() => {
         previousPhoto();
       } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
         nextPhoto();
+      } else if (e.key === "Escape") {
+        closeLightbox();
       }
     });
 

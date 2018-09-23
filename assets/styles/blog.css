@@ -7,7 +7,7 @@
   position: absolute;
   display: grid;
   grid-template-rows: 74px auto 40px;
-  grid-template-columns: 78px auto 78px;
+  grid-template-columns: 32px auto 32px;
   grid-template-areas:
     ". . ."
     ". c ."
@@ -16,7 +16,7 @@
 
 @media (min-width: 768px) {
   .wrapper {
-    grid-template-columns: 120px auto 120px;
+    grid-template-columns: 88px auto 88px;
   }
 }
 
