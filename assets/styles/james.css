@@ -30,7 +30,7 @@
   display: grid;
   gap: 20px;
   grid-template-columns: auto;
-  pointer-events: none;
+  /* pointer-events: none; */
   opacity: 0;
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;

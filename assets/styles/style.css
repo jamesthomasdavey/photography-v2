@@ -45,6 +45,7 @@ html {
 *****************************/
 
 body {
+  pointer-events: all;
   height: 100%;
   font-family: var(--main-font-stack);
   color: var(--black);
@@ -298,8 +299,7 @@ button {
   .burger {
     justify-self: center;
     position: relative;
-    top: 0;
-    left: 0;
+    background-color: yellow;
     margin: auto 0;
     -ms-flex-item-align: center;
     align-self: center;
