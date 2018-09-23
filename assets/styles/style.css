@@ -296,10 +296,11 @@ button {
 
 @media (min-width: 768px) {
   .burger {
+    justify-self: center;
     position: relative;
     top: 0;
     left: 0;
-    /* top: 50%; */
+    margin: auto 0;
     -ms-flex-item-align: center;
     align-self: center;
     -webkit-transform: translateX(0);
